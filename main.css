@@ -58,7 +58,7 @@ body {
   transform: translate(-50%, -50%);
   width: 380px;
   height: 380px;
-  background-image: url(images/botol.png);
+  background-image: url("./images/botol.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
