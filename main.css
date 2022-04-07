@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;300;400;700&display=swap");
+:root {
+  font-size: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  --primary-blue: #233975;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.split-screen {
+  display: flex;
+  flex-direction: column;
+}
+.left {
+  height: 400px;
+}
+.left,
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  background-color: #357960;
+  background-size: cover;
+}
+.left .copy {
+  color: white;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.left p {
+  font-weight: 400;
+}
+.right {
+  height: 400px;
+  background-color: #92a143;
+  background-size: cover;
+}
+
+.right .copy {
+  color: black;
+  text-align: center;
+}
+.right p {
+  margin: 1.5em;
+}
+.gambar {
+  position: absolute;
+  top: 75%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 380px;
+  background-image: url("/images/botol.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.right-sidebars {
+  position: absolute;
+  right: 20px;
+  top: 80%;
+  transform: translateY(-50%);
+  text-align: right;
+  color: white;
+}
+.right-sidebars ul {
+  list-style: none;
+}
+.right-sidebars li:not(:first-child) {
+  padding: 3px 0;
+  font-size: 1em;
+}
+.title {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 500;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  color: azure;
+}
+
+.right-sidebars li:not(:first-child):hover {
+  transform: translateY(-5px);
+  transition: 0.4s ease-out;
+  font-size: 1.7em;
+  color: #cff016;
+  text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4,
+    6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd;
+  color: #ffffff;
+}
+/* bagian responsive untuk layar besar */
+@media screen and (min-width: 900px) {
+  .split-screen {
+    flex-direction: row;
+    height: 100vh;
+  }
+  .left,
+  .right {
+    display: flex;
+    width: 50%;
+    height: auto;
+  }
+  .right-sidebars {
+    right: 80px;
+    top: 70%;
+  }
+  .right-sidebars li:not(:first-child) {
+    font-size: 1.2em;
+  }
+  .title {
+    font-size: 2em;
+  }
+  .gambar {
+    left: 50%;
+    top: 70%;
+
+    width: 400px;
+    height: 400px;
+  }
+}
